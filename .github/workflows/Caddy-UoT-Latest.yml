@@ -51,7 +51,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         name: Caddy-UoT-Latest ${{ steps.cv.outputs.cv }} with ${{ steps.cv.outputs.gv }}
-        tag_name: UoT-Latest ${{ steps.date.outputs.date }}
+        tag_name: UoT-Latest${{ steps.date.outputs.date }}
         files: ./caddy.tar.gz
         prerelease: true
     - name: Delete Artifacts
