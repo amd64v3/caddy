@@ -1,4 +1,4 @@
-name: Caddy-Uot Build-latest
+name: Caddy-UoT Build-Latest
 
 on:
   workflow_dispatch:
@@ -50,8 +50,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: Caddy-Uot-latest ${{ steps.cv.outputs.cv }} with ${{ steps.cv.outputs.gv }}
-        tag_name: ${{ steps.date.outputs.date }}
+        name: Caddy-UoT-Latest ${{ steps.cv.outputs.cv }} with ${{ steps.cv.outputs.gv }}
+        tag_name: UoT-Latest ${{ steps.date.outputs.date }}
         files: ./caddy.tar.gz
         prerelease: true
     - name: Delete Artifacts
