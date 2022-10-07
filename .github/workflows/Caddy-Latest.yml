@@ -1,4 +1,4 @@
-name: Caddy Build-latest
+name: Caddy Build-Latest
 
 on:
   workflow_dispatch:
@@ -50,8 +50,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: Caddy-latest ${{ steps.cv.outputs.cv }} with ${{ steps.cv.outputs.gv }}
-        tag_name: ${{ steps.date.outputs.date }}
+        name: Caddy-Latest ${{ steps.cv.outputs.cv }} with ${{ steps.cv.outputs.gv }}
+        tag_name: Latest ${{ steps.date.outputs.date }}
         files: ./caddy.tar.gz
     - name: Delete Artifacts
       uses: geekyeggo/delete-artifact@v1
