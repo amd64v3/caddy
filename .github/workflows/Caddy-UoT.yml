@@ -25,7 +25,7 @@ jobs:
         --with github.com/caddy-dns/cloudflare \
         --with github.com/mholt/caddy-webdav \
         --with github.com/mastercactapus/caddy2-proxyprotocol \
-        --with github.com/imgk/caddy-trojan
+        --with github.com/imgk/caddy-trojan@master
         chmod +x caddy
         tar zcvf ./caddy.tar.gz ./caddy
     - name: Output
