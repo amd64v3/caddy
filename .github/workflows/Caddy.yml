@@ -25,7 +25,7 @@ jobs:
         chmod +x caddy
         tar zcvf ./caddy.tar.gz ./caddy
     - name: Output
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
           name: Caddy
           path: ./caddy.tar.gz
@@ -42,7 +42,7 @@ jobs:
         echo "::set-output name=gv::$(go version | awk '{print $3}')"
     
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -50,7 +50,7 @@ jobs:
         tag_name: ${{ steps.date.outputs.date }}
         files: ./caddy.tar.gz
     - name: Delete Artifacts
-      uses: geekyeggo/delete-artifact@v1
+      uses: geekyeggo/delete-artifact@v3
       with:
         name: |
           Caddy
