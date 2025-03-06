@@ -20,10 +20,7 @@ jobs:
       run: |
         go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
         ~/go/bin/xcaddy build master \
-        --with github.com/mholt/caddy-l4 \
         --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive \
-        --with github.com/caddy-dns/cloudflare \
-        --with github.com/mholt/caddy-webdav \
         --with github.com/imgk/caddy-trojan
         chmod +x caddy
         tar zcvf ./caddy.tar.gz ./caddy
