@@ -1,4 +1,4 @@
-name: Caddy Build-Latest
+name: Caddy Build-Latest-Other
 
 on:
   workflow_dispatch:
